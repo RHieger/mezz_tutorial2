@@ -101,7 +101,7 @@ ALLOWED_HOSTS = []
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
@@ -249,6 +249,9 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
+    "mezzanine_pagedown",
+    "django.contrib.admin",
+    "django.contrib.auth",
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
