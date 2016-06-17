@@ -8,6 +8,7 @@ from django.views.i18n import set_language
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
 
+import mezzanine_pagedown.urls
 
 admin.autodiscover()
 
