@@ -1,3 +1,4 @@
+*.sq3
 *.pyc
 *.pyo
 *.db
@@ -6,3 +7,6 @@
 local_settings.py
 /static
 __pycache__
+project/static/media/uploads/*
+project/static/CACHE/*
+*~
