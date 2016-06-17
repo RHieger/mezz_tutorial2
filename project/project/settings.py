@@ -147,6 +147,8 @@ AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 # a mode you'd pass directly to os.chmod.
 FILE_UPLOAD_PERMISSIONS = 0o644
 
+SECRET_KEY = "thisshouldberandom"
+
 
 #############
 # DATABASES #
@@ -242,7 +244,7 @@ if DJANGO_VERSION < (1, 9):
 ################
 
 INSTALLED_APPS = (
-    "mezzzanine-pagedown",
+    "mezzanine_pagedown",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
