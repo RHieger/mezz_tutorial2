@@ -213,6 +213,8 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
 # Package/module name to import the root urlpatterns from for the project.
 ROOT_URLCONF = "%s.urls" % PROJECT_APP
 
+TEMPLATE_DIRS = ['project/templates',]
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -249,6 +251,7 @@ if DJANGO_VERSION < (1, 9):
 ################
 
 INSTALLED_APPS = (
+    "project",
     "mezzanine_pagedown",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -267,7 +270,6 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.galleries",
     "mezzanine.twitter",
-    "project",
     "mezzanine"
     # "mezzanine.accounts",
     # "mezzanine.mobile",
