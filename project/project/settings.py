@@ -7,6 +7,17 @@ from django.utils.translation import ugettext_lazy as _
 
 
 ######################
+# PAGEDOWN SETTINGS  #
+######################
+
+RICHTEXT_WIDGET_CLASS           = 'mezzzanine-pagedown.widgets.PagedownWidget'
+RICHTEXT_FILTER                 = 'mezzanine_pagedown.filters.custom'
+RICHTEXT_FILTERS                = (RICHTEXT_FILTER,)
+PAGEDOWN_MARKDOWN_EXTENSIONS    = ('extra', 'codehilite', 'toc')
+RICHTEXT_FILTER_LEVEL           = 3
+PAGEDOWN_SERVER_SIDE_PREVIEW    = True
+
+######################
 # MEZZANINE SETTINGS #
 ######################
 
@@ -230,6 +241,7 @@ if DJANGO_VERSION < (1, 9):
 ################
 
 INSTALLED_APPS = (
+    "mezzzanine-pagedown",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -249,9 +261,6 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
-    "mezzanine_pagedown",
-    "django.contrib.admin",
-    "django.contrib.auth",
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
