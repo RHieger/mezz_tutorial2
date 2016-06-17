@@ -10,7 +10,7 @@ from django.utils.translation import ugettext_lazy as _
 # PAGEDOWN SETTINGS  #
 ######################
 
-RICHTEXT_WIDGET_CLASS           = 'mezzzanine-pagedown.widgets.PagedownWidget'
+RICHTEXT_WIDGET_CLASS           = 'mezzanine_pagedown.widgets.PageDownWidget'
 RICHTEXT_FILTER                 = 'mezzanine_pagedown.filters.custom'
 RICHTEXT_FILTERS                = (RICHTEXT_FILTER,)
 PAGEDOWN_MARKDOWN_EXTENSIONS    = ('extra', 'codehilite', 'toc')
