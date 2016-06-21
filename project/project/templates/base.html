@@ -102,27 +102,17 @@
 
 <div class="col-md-2 left">
     {% block left_panel %}
-    <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
+    <div class="panel panel-default tree"></div>
     {% endblock %}
 </div>
 
-<div class="col-md-7 middle">
+<div class="{% block main_span %}span10{% endblock %} middle">
     {% block main %}{% endblock %}
 </div>
 
-<div class="col-md-3 right">
-    {% nevercache %}
-    {% include "includes/language_selector.html" %}
-    {% include "includes/user_panel.html" %}
-    {% endnevercache %}
-    <div class="panel panel-default">
-    <div class="panel-body">
-    {% block right_panel %}
-    {% ifinstalled mezzanine.twitter %}
-    {% include "twitter/tweets.html" %}
-    {% endifinstalled %}
-    {% endblock %}
-    </div>
+<div class="{% block right_panel_span %}span1{% endblock %} right">
+    {% block right_panel %}{% endblock %}
+        </div>
     </div>
 </div>
 
@@ -131,7 +121,6 @@
 
 <footer>
 <div class="container">
-{% page_menu "pages/menus/footer.html" %}
 
 <div class="row">
 <p class="site-info text-center">
